@@ -1,0 +1,33 @@
+<div id="container">
+  <h1>Order Details</h1>
+  <table id="customers">
+    <tr>
+      <td>Order Date:</td>
+      <td>Order By:</td>
+      <td>Order Status:</td>
+    </tr>
+    
+    <tr>
+      <td><%= @order.order_date %></td>
+      <td<%= @order.user %>></td>
+      <td><%= @order.status %></td>
+    </tr>
+
+  </table>
+      <tr>
+<%= link_to 'Edit', edit_order_path(@order), class: "btn btn-lg btn-primary" %>
+<%= link_to 'Back', orders_path, class: "btn btn-lg btn-primary"  %>
+</tr>
+
+<h2>Order Details</h2>
+<table id="customers">
+  <% @orderitems.each do |orderitem| %>
+  <tr>
+    <td><%= orderitem.title %></td>
+    <td>Qty Ordered: <%= orderitem.quantity %></td>
+  </tr>
+  
+  <% end %>
+</table>
+</div>
+

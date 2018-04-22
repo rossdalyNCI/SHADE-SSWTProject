@@ -1,0 +1,55 @@
+
+<div id="container">
+
+<h2>Thank You!</h2>
+<p>You just placed an order with SHADE Clothing</p>
+</div>
+
+<table id="customers">
+    <tr>
+        <% @orders.limit(1).order(id: :desc).each do |order| %>
+        <td>Order refernce: <%= order.id %></td>
+        <% end %>
+    </tr>
+    
+</table>
+
+<table id="customers">
+    <% @total = 0 %>
+    
+    <% @orderitems.each do |id, quantity| %>
+    <tr>
+        <% item = Orderitem.find_by_id(id) %>
+        <td><%= item.title %></td>
+        <td><%= item.quantity %></td>
+        <td><%= number_to_currency(item.price, :unit =>"$") %></td>
+        <td><%= number_to_currency(item.quantity * item.price, :unit =>"$") %></td>
+    </tr>
+    
+    <% timx = (item.quantity * item.price) %>
+    
+    <% @total += timx %>
+    <% end %>
+    
+    <tr>
+        <td>Order Total: <%= @total %></td>
+    </tr>
+    
+    <% shipping = 10 %>
+    <% @overall = shipping + @total %>
+    
+    <tr>
+        <td>Shipping Cost &dollar;10</td>
+    </tr>
+    
+    <tr>
+        <td>You Pay: &dollar; <%= @overall %></td>
+    </tr>
+    
+    <tr>
+        <td>
+            <a href="/paid" class="btn btn-danger btn-rounded">Submit Payment</a>
+        </td>
+    </tr>
+</table>
+

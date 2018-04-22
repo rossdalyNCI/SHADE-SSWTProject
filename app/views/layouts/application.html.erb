@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | SHADE Clothing</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    
+    <%= render 'layouts/header' %>
+    
+     <div class="center jumbotron">
+       <div id="container">
+            <h1>Welcome to SHADE CLOTHING</h1>
+            <div class="jackpots">SALE 50% off</div>
+          </div>
+      </div>
+    
+    
+    </div><br>
+    <div id="main_content" class="container">
+      
+      <div id="content" class="col-md-9 center-block">
+      
+    <%= yield %>
+     </div>
+     </div>
+     
+     <%= render 'layouts/footer' %>
+     
+     
+  </body>
+</html>

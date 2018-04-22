@@ -1,0 +1,36 @@
+ <header class="navbar navbar-default" role="navigation">
+      <div class="navbar-inner">
+        <div class="container">
+          <div id="logo" class="navbar-brand"><%= link_to "SHADECLOTHING", root_path %></div>
+          <nav class="collapse navbar-collapse navbar-ex1-collapse">
+    
+   
+          <ul class="nav navbar-nav navbar-right"> 
+      
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Products", items_path %></li>
+        <li><%= link_to "Cart", cart_path %></li>
+        
+        <% if user_signed_in? %>
+        <li><a href="#">Hi <%= current_user.email %></a></li>
+        <li><%= link_to 'Sign Out', destroy_user_session_path, :method =>:delete %></li>
+        <% else %>
+         <li><%= link_to 'Register', new_user_registration_path %></li>
+         <li><%= link_to 'Sign In', new_user_session_path %></li>
+         <% end %>
+        
+        
+        <% if session[:login] == 1 %>
+        <li><%= link_to "Admin Logout", logout_path %></li>
+        <% else %>
+        
+        <li><%= link_to "Admin Login", login_path %></li>
+        <% end %>
+        
+        </ul>
+        </nav>
+      </div>
+      </div>
+      
+    
+    </header>

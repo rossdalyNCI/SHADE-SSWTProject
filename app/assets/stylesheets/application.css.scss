@@ -1,0 +1,161 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+body {
+	background: linear-gradient(42.5deg, #2E8B57 50%, #00674c 50.1%);
+}
+
+#logo {
+	font-size: 26px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	padding: 15px 0;
+	text-decoration: overline underline;
+	
+	a {
+		color: #2F363E;
+	}
+	a:hover { 
+    background-color: #FFF;
+    text-decoration: underline overline dotted #f7b538;
+}
+	
+}
+.center {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding: 30px;
+    border:#ccc 3px solid;
+}
+
+
+
+#main_content {
+	#content {
+		float: none;
+		background: #FFF;
+		padding: 5px 30px;
+		text-transform: uppercase;
+		border:#ccc 3px solid;
+		text-align: center;
+	}
+	
+
+	a{
+		text-decoration: none;
+		color: #f7b538;
+	}
+	
+}
+
+h3 {
+    text-shadow: 10px;
+    font-size: 50px;
+    color: #FFF;
+  }
+		
+ .jackpots {
+    font-family: moon;
+    font-size: 4.1vw;
+    margin-left: 1.5vw;
+  }
+  .jackpots {
+    animation: jackpots 1.5s 0s ease infinite;
+    -moz-animation: jackpots 1.5s 0s ease infinite;
+    /* Firefox */
+    -webkit-animation: jackpots 1.5s 0s ease infinite;
+    /* Safari and Chrome */
+    -o-animation: jackpots 1.5s 0s ease infinite;
+    /* Opera */
+  }
+  @keyframes jackpots {
+    0%,
+    100% {
+    text-shadow: 
+    -.1vw 0vw .1vw #FED128, -.15vw 0vw .2vw #FED128, -.2vw 0vw .2vw #FED128, 
+    -.1vw 0vw 3vw #F0130B, -.2vw 0vw 3vw #F0130B, -.4vw 0vw 3vw #F0130B,
+    -.1vw 0vw 5vw #F0130B, -.2vw 0vw 5vw #F0130B, -.4vw 0vw .8vw #F0130B, .2vw 0vw 10vw #F0130B;
+      color: #FED128;
+    }
+    50% {
+    text-shadow: 
+    -.1vw 0vw .1vw #705C12, -.15vw 0vw .2vw #705C12, -.2vw 0vw .2vw #705C12, 
+    -.1vw 0vw .1vw #5C0704, -.2vw 0vw .1vw #5C0704, -.4vw 0vw .1vw #5C0704,
+    -.1vw 0vw .2vw #5C0704, -.2vw 0vw .2vw #5C0704, -.4vw 0vw .2vw #5C0704, .2vw 0vw .5vw #5C0704;
+      color: #705C12;
+    }
+  }
+  footer{
+	padding: 20px;
+	margin-top: 80px;
+	color: #AA4847;
+	background-color: #FFF;
+	text-align: center;
+}
+
+	
+
+.container button{
+	float: right;
+	text-decoration: underline overline dotted #f7b538;
+}
+
+.itemholsIm {
+    width: 30%; 
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    }
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-decoration: none;
+    color: #AA4847;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+.itemhols {
+    text-decoration: overline underline;
+}
+.itemholsIm {
+    border-style: solid;
+    border-width: 5px;
+}
+footer a:hover { 
+    background-color: #FFF;
+    text-decoration: underline overline dotted red;
+}
